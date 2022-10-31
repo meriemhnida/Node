@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/style.css" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="favicon.png">
+<script src="/script.js"></script>
+</head>
+
+
+
+
+<body>
+
+<%- include('header.ejs') %>
+
+    
+<div class="container">
+
+    <div> <h2 align="center">Ingénierie d'Applications Web et Mobiles</h2></div>
+    <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Cours</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="cours" placeholder="Le nom du cours..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Professeur</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="professeur" placeholder="Le nom du professeur..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Salle</label>
+      </div>
+      <div class="col-75">
+        <select  name="salle">
+          <option value="B.1.65">B.1.65</option>
+          <option value="B.1.70">B.1.70a</option>
+          
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <input type="submit" value="Ajouter">
+    </div>
+    </form>
+  </div>
+    <div align="center">
+<table class="styled-table" >
+    <thead>
+        <tr>
+            <th>Cours</th>
+            <th>Professeur</th>
+            <th>Salle</th>
+            <th>Etudiants</th>
+            <th colspan="2">actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><a href=""/cours/1/desc>Ingénierie des bases de données</a></td>
+            <td>Pr.ELMOUHTADI Meryem</td>
+            <td>B4-1.65</td>
+            <td><a href="/student"><img src="liste.png"></a></td>
+            <td><a href="/"><img src="edit.png" width="24" height="24"></a></td>
+            <td><a href="/"><img src="delete.png" width="24" height="24"></a></td>
+        </tr>
+        <tr class="active-row">
+            <td><a href="/cours/2/desc">Plateforme Node.js</a></td>
+            <td>Pr.HNIDA Meriem</td>
+            <td>B4-1.65</td>
+            <td><a href="/student"><img src="liste.png"></a></td>
+            <td><a href="/"><img src="edit.png" width="24" height="24"></a></td>
+            <td><a href="/"><img src="delete.png" width="24" height="24"></a></td>
+        </tr>
+       
+    </tbody>
+</table>
+</div>
+</body>
+</html>
